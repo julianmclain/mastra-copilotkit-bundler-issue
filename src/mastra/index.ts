@@ -8,6 +8,10 @@ import { weatherAgent } from './agents/weather-agent';
 import { toolCallAppropriatenessScorer, completenessScorer, translationScorer } from './scorers/weather-scorer';
 
 export const mastra = new Mastra({
+  // uncomment to fix the issue
+  // bundler: {
+  //   externals: ["@copilotkit/runtime"],
+  // },
   workflows: { weatherWorkflow },
   agents: { weatherAgent },
   scorers: { toolCallAppropriatenessScorer, completenessScorer, translationScorer },
